@@ -47,7 +47,7 @@ function imageAutoRotate($originalFilename) {
 	}
 }
 
-if (PHP_SAPI == 'cli') {
+if (PHP_SAPI == 'cli' && __FILE__ == $argv[0]) {
 	if (count($argv)!=2)
 		die("Usage: php imageAutoRotate.php <image>\n");
 
